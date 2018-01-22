@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {TooltipModule} from "ng2-tooltip";
 
 @Component({
   selector: 'app-root',
