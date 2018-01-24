@@ -9,10 +9,10 @@
 
 .meeting-card{
   margin-bottom: 25px;
-  height: 89%;
+  min-height: 89%;
 }
 
 .meeting-plus-button{
   float: right;
-  top: 87px;
+  /* top: 87px; */
 }

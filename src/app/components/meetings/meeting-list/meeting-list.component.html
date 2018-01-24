@@ -5,11 +5,11 @@
 </div>
 <div class="row card-list">
   <!-- card list repeat -->
-  <div class="col-md-3 col-sm-6 col-12">
+  <div class="col-md-3 col-sm-6 col-12" *ngFor="let meeting of meetings">
     <div class="card meeting-card">
       <div class="card-body">
-        <h4 class="card-title">Meeting for salesperson</h4>
-        <p>Meeting for shoose a salesperson</p>
+        <h4 class="card-title">{{meeting.name}}</h4>
+        <p>{{meeting.description}}</p>
         <a href="#" class="btn btn-primary">see tikets <i class="fas fa-arrow-right"></i> </a>
       </div>
     </div>
