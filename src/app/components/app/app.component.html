@@ -17,40 +17,9 @@
   
 </nav>
 <div class="container">
-  <!-- content -->
-  <div class="row list-title">
-    <div class="col">
-      <h2>Meeting list <i class="far fa-newspaper"></i></h2>
-    </div>
-  </div>
-  <div class="row card-list">
-    <!-- card list repeat -->
-    <div class="col-md-3 col-sm-6 col-12">
-      <div class="card meeting-card">
-        <div class="card-body">
-          <h4 class="card-title">Meeting for salesperson</h4>
-          <p>Meeting for shoose a salesperson</p>
-          <a href="#" class="btn btn-primary">see tikets <i class="fas fa-arrow-right"></i> </a>
-        </div>
-      </div>
-    </div>
-    <!-- add meeting -->
-    <div class="col-md-3 col-sm-6 col-12">
-      <div class="card meeting-card">
-        <div class="card-body">
-          <h4 class="card-title">Add meeting</h4>
-          <a href="#" class="btn btn-primary meeting-plus-button"><i class="fas fa-plus"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- footer -->
-<div class="container-fluid">
-  
-  <div class="row">
-    <div class="col">footer</div>
-  </div>
-</div>
+  <!-- componente interno -->
+  <router-outlet></router-outlet> <!--Aquí se mueve toda la app con rutas-->
+
+</div> <!--Container-->
       
 
