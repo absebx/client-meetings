@@ -8,12 +8,13 @@ import { routing, appRoutingProviders} from './app.routing';
 
 import {TooltipModule} from "ng2-tooltip";
 import { MeetingListComponent } from './components/meetings/meeting-list/meeting-list.component';
-
+import { MeetingNewComponent } from './components/meetings/meeting-new/meeting-new.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MeetingListComponent
+    MeetingListComponent,
+    MeetingNewComponent,
   ],
   imports: [
     BrowserModule,

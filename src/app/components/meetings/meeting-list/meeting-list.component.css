@@ -6,13 +6,3 @@
 .card-list{
   margin-bottom: 25px;
 }
-
-.meeting-card{
-  margin-bottom: 25px;
-  min-height: 89%;
-}
-
-.meeting-plus-button{
-  float: right;
-  /* top: 87px; */
-}

@@ -1,0 +1,10 @@
+.meeting-card{
+  margin-bottom: 25px;
+  min-height: 89%;
+}
+
+.body-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

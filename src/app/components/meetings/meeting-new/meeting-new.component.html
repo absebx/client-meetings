@@ -1,0 +1,26 @@
+<div class="card meeting-card">
+  <div class="card-body">
+    <h4 class="card-title">Add meeting</h4>
+    <form #formMeeting="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="meeting-name">Name:</label>
+        <input type="text" #name="ngModel" name="name" id="meeting-name"
+        [(ngModel)]="meeting.name" required class="form-control">
+        <div class="text-danger" *ngIf="!name.valid && name.touched">
+            <i class="fas fa-exclamation"></i> Name is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="meeting-description">Description</label>
+        <textarea #description="ngModel" name="description"
+        [(ngModel)]="meeting.description" required class=""
+        class="form-control"></textarea>
+        <div class="text-danger" *ngIf="!name.valid && name.touched">
+          <i class="fas fa-exclamation"></i> Description is required
+        </div>
+      </div>
+      <button class="btn btn-primary meeting-plus-button">
+        <i class="fas fa-plus"></i> Add
+      </button>
+    </form>
+</div>

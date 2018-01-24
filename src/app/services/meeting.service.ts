@@ -18,4 +18,12 @@ export class MeetingService {
       .map(res => res.json());
   }
 
+  addMeeting(meeting: Meeting){
+    let json = JSON.stringify(meeting);
+    let params = json;
+    let headers = new Headers({'Content-Type': 'application/json'});
+    return this._http.post(this.url+'meeting', params, {headers: headers})
+      .map(res => res.json());
+  }
+
 }
