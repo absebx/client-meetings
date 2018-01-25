@@ -1,7 +1,7 @@
 <div class="card meeting-card">
   <div class="card-body">
     <h4 class="card-title">Add meeting</h4>
-    <form #formMeeting="ngForm" (ngSubmit)="onSubmit()">
+    <form #formMeeting="ngForm" (ngSubmit)="onSubmit(formMeeting)">
       <div class="form-group">
         <label for="meeting-name">Name:</label>
         <input type="text" #name="ngModel" name="name" id="meeting-name"

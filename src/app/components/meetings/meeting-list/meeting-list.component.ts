@@ -22,6 +22,7 @@ export class MeetingListComponent implements OnInit {
   }
 
   getMeetings(){
+    this.meetings = [];
     this.loading = true;
     this._meetingService.getMeetings().subscribe(
       result => {
@@ -36,6 +37,13 @@ export class MeetingListComponent implements OnInit {
         this.loading = false;
       }
     );
+  }
+
+  updateList(event){
+    if(event === true){
+      console.log("Meeting ingresada");
+      this.getMeetings();
+    }
   }
 
   
