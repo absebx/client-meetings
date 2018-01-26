@@ -12,9 +12,9 @@
 </div>
 <div class="row" *ngFor="let ticket of tickets"><!--Lista de tickets-->
   <div class="col">
-    <strong>
-      <i *ngIf="!ticket.check" class="far fa-square"></i>
-      <i *ngIf="ticket.check" class="far fa-check-square"></i>
+    <strong (click)="checkTicket(ticket._id)" class="ticket-check">
+        <i *ngIf="!ticket.check" class="far fa-square"></i>
+        <i *ngIf="ticket.check" class="far fa-check-square"></i>
       {{ticket.name}}
     </strong>
   </div>

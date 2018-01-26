@@ -97,4 +97,21 @@ export class MeetingDetailComponent implements OnInit {
     );
   }
 
+  checkTicket(id: string){
+    console.log("check: "+id);
+    this._ticketService.checkTicket(id).subscribe(
+      result => {
+        if(!result.ticketUpdated){
+          console.log("Error in petition");
+        }else{
+          this.getTickets();
+          console.log("get tickets");
+        }
+      }, err => {
+        this.errorMessage = <any>err;
+        console.log("Error in petition");
+      }
+    );
+  }
+
 }

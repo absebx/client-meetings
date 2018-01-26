@@ -31,4 +31,10 @@ export class TicketService {
     return this._http.post(this.url+'ticket', params, {headers: headers})
       .map(res => res.json());
   }
+
+  checkTicket(ticketId: string){
+    let headers = new Headers({'Content-Type': 'application/json'});
+    return this._http.put(this.url+'check-ticket/'+ticketId,{},{headers: headers})
+      .map(res => res.json());
+  }
 }
