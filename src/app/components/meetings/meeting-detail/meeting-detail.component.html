@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col">
+    <h3><i class="far fa-newspaper"></i> {{meeting.name}}</h3>
+    <p>{{meeting.description}}</p>
+    <hr>
+  </div>
+</div>
+<div class="row"> 
+  <div class="col">
+    <h4><i class="far fa-list-alt"></i> Tickets</h4>
+  </div>
+</div>
+<div class="row" *ngFor="let ticket of tickets"><!--Lista de tickets-->
+  <div class="col">
+    <strong>
+      <i *ngIf="!ticket.check" class="far fa-square"></i>
+      <i *ngIf="ticket.check" class="far fa-check-square"></i>
+      {{ticket.name}}
+    </strong>
+  </div>
+</div>
+<div class="row"><!--add ticket-->
+  <div class="col">
+    <form #formTicket="ngForm" (ngSubmit)="onSubmit(formTicket)" class="form-inline">
+      <div class="form-group">
+        <input type="text" #name="ngModel" name="name" id="ticket-name"
+        [(ngModel)]="newTicket.name" class="form-control" placeholder="ticket" required>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-secondary"><i class="fas fa-plus"></i></button>
+      </div>
+      <!-- <div class="form-group">
+        <div class="text-danger" *ngIf="!formTicket.valid && form.submited">
+          <i class="fas fa-exclamation"></i> Name is required
+        </div>
+      </div> -->
+    </form>
+  </div>
+</div>

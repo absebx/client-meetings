@@ -18,6 +18,11 @@ export class MeetingService {
       .map(res => res.json());
   }
 
+  getMeeting(id: string){
+    return this._http.get(this.url+'meeting/'+id)
+      .map(res => res.json());
+  }
+
   addMeeting(meeting: Meeting){
     let json = JSON.stringify(meeting);
     let params = json;

@@ -12,8 +12,7 @@
           <h4 class="card-title">{{meeting.name}}</h4>
           <p>{{meeting.description}}</p>
         </div>
-        
-        <a href="#" class="btn btn-primary">see tikets <i class="fas fa-arrow-right"></i> </a>
+        <a [routerLink]="['/meeting', meeting._id]" class="btn btn-primary">see tikets <i class="fas fa-arrow-right"></i> </a>
       </div>
     </div>
   </div>
